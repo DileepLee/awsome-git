@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root">
+        <h1>Hello World!</h1>
+        <div id="u-list">
+        </div>
+    </div>
+    <script type="text/javascript">
+        let container = document.getElementById("root");
+        let dataList = document.getElementById("u-list");
+
+        let data = [
+            {name: "Dileep",age: 25},
+            {name: "Dileep",age: 25},
+            {name: "Dileep",age: 25},
+            {name: "Dileep",age: 25},
+            {name: "Dileep",age: 25},
+        ]
+        let res = data;
+
+        const profileData = () => {
+        data.forEach((person) => {
+                let listItem = document.createElement("h3");
+                listItem.classList.add("list-item");
+                listItem.textContent = `${person.name} ${person.age}`;
+                dataList.appendChild(listItem);
+        });
+        }
+        profileData();
+
+
+    </script>
+</body>
+</html>
